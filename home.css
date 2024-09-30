@@ -1,0 +1,80 @@
+*,
+        *::after *::before {
+            box-sizing: border-box;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --principal-color: #fff;
+            --secundaria-color: #000;
+            --destaque-color: #FFFF00;
+            --titulo-color: #545454;
+            --subtitulo-color: #7E7E7E;
+            --texto-color: #A8A8A8;     
+           }
+
+        html {font-size: 16px;}
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .topo {
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .calendario {
+         display: flex;
+         overflow-x: scroll;
+         width: 100%;
+         height: 15vh;
+         scroll-snap-type: x mandatory;
+         gap: 12px;
+
+          .jogos {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            background-color: var(--principal-color);
+            text-align: center;
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+       
+        
+            
+            h2 {
+         
+                font-size: 14px;
+                color: var(--titulo-color);
+
+            }
+            
+            p {
+                font-size: 12px;
+                color: var(--subtitulo-color);
+            }
+            
+            
+        }
+    }
+
+
+
+        .destaque {
+            height: 75vh;
+            background-color: var(--destaque-color);
+        }
