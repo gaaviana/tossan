@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carrossel {
+            /* display: grid;
+            grid-auto-flow: column;
+            scroll-behavior: auto;
+            gap: 1.2rem;
+            overflow-y: auto;
+            overscroll-behavior-x: contain;
+            scrollbar-width: x mandatory;
+            scrollbar-width: none;
+            width: 300px; */
+
+            display: flex;
+            overflow-x: scroll;
+            padding: 24px;
+            width: 300px;
+            height: 300px;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 24px;
+            border-radius: 8px;
+            gap: 12px;
+            margin: 2rem auto;
+
+        }
+
+        .card {
+            /* width: 200px;
+            height: 100px;
+            background-color: lightskyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center; */
+
+            flex: 0 0 100%;
+            padding: 24px;
+            border-radius: 8px;
+            scroll-snap-align: start;
+            background-color: lightgray;
+        }
+
+        /*
+        .carrossel
+Exibição flexível: Usa display: flex; para organizar os itens em linha.
+Rolagem horizontal: overflow-x: scroll; permite que o usuário role horizontalmente.
+Espaçamento interno: padding: 24px; adiciona espaço dentro do carrossel.
+Tamanho fixo: Define width e height de 300px, limitando o espaço que o carrossel ocupa.
+Ajuste de rolagem: scroll-snap-type: x mandatory; e scroll-snap-align: start; fazem com que os cartões se "encaixem" em posições específicas ao rolar, melhorando a experiência do usuário.
+Estilo visual: Adiciona bordas arredondadas (border-radius: 8px;) e um espaço entre os itens (gap: 12px;).
+Centralização: margin: 2rem auto; centraliza o carrossel na página. */
+
+
+        /* .card
+Flexibilidade: flex: 0 0 100%; faz com que cada cartão ocupe toda a largura do carrossel.
+Espaçamento interno: padding: 24px; adiciona espaço dentro de cada cartão.
+Bordas arredondadas: Também possui bordas arredondadas (border-radius: 8px;).
+Cor de fundo: Define a cor de fundo como lightgray.
+Alinhamento na rolagem: scroll-snap-align: start; permite que cada cartão se alinhe corretamente ao iniciar a rolagem. */
+    </style>
+</head>
+
+<body>
+
+    <div class="carrossel">
+        <article class="card">
+            <h1>A</h1>
+
+        </article>
+        <article class="card">
+            <h1>B</h1>
+        </article>
+        <article class="card">
+            <h1>C</h1>
+        </article>
+        <article class="card">
+            <h1>D</h1>
+        </article>
+        <article class="card">
+            <h1>E</h1>
+        </article>
+        <article class="card">
+            <h1>F</h1>
+        </article>
+        <article class="card">
+            <h1>G</h1>
+        </article>
+    </div>
+
+</body>
+
+</html>
