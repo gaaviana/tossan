@@ -1,26 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
 
-        <style>
-            html {
-                font-size: 16px;
-            }
+    <style>
+        html {
+            font-size: 16px;
+        }
 
-            h2 {
-                font-size: 3rem;
-            }
+        h2 {
+            font-size: 3rem;
+        }
 
-            p {
-                font-size: 1.5rem;
-            }
-        </style>
+        p {
+            font-size: 1.5rem;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
+        }
+
+        .cor-principal {
+            width: 49px;
+            height: 49px;
+            background-color: #fff;
+            border: solid 1px;
+        }
+
+        .cor-secundaria {
+            background-color: #000;
+        }
+
+        .cor-destaque {
+            background-color: #ffff00;
+        }
+
+        .cor-titulo {
+            background-color: #2a2a2a;
+        }
+
+        .cor-subtitulo {
+            background-color: #3e3e3e;
+        }
+
+        .cor-texto {
+            background-color: #535353;
+        }
+
+        .cor-texto-alternativo {
+            width: 49px;
+            height: 49px;
+            background-color: #fff;
+            border: solid 1px;
+        }
+
+        .cores {
+            width: 330px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    </style>
 
     <title>teste de fontes</title>
 </head>
@@ -49,12 +97,33 @@
     ">Teste de fontes para site de desenvolvimento web</p>
     <hr>
 
-    <h2 style="   font-family: Inter, sans-serif;"
-    >Inter</h2>
+    <h2 style="   font-family: Inter, sans-serif;">Inter</h2>
     <p style="  font-family: Inter, sans-serif;
     ">Teste de fontes para site de desenvolvimento web</p>
     <hr>
 
+    <article class="cores">
+        <div class="cor-principal"></div>
+        <p>Cor Principal - #ffffff</p>
+
+        <div class="cor-secundaria"></div>
+        <p>Cor Secundaria - #000000</p>
+
+        <div class="cor-destaque"></div>
+        <p>Cor Destaque - #ffff00</p>
+
+        <div class="cor-titulo"></div>
+        <p>Cor titulo - #2a2a2a</p>
+
+        <div class="cor-subtitulo"></div>
+        <p> Cor subtitulo - #3e3e3e</p>
+
+        <div class="cor-texto"></div>
+        <p>Cor Texto - #535353</p>
+
+        <div class="cor-texto-alternativo"></div>
+        <p>Cor Alternativa - #ffffff</p>
+    </article>
 </body>
 
 </html>
