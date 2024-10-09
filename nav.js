@@ -41,4 +41,3 @@ const navMenu = new NavMenu(
     ".links-menu li",
 );
 navMenu.init();
-

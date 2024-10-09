@@ -1,0 +1,196 @@
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* css padrão */
+*, *::after, *::before {box-sizing: border-box;}
+
+:root {
+    
+    --cor-principal: #fff;
+    --cor-secundaria: #000;
+    --cor-destaque: #ffff00; 
+    --cor-titulo: #2a2a2a;
+    --cor-subtitulo: #3e3e3e;
+    --cor-texto: #535353;
+} 
+
+body, h1, h2, p, figure, .links-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+html {font-size: 16px;}
+
+body {
+    font-family: "Raleway", sans-serif;
+    /* color: var(--cor-texto); */
+    overflow: hidden;
+}
+
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* cabeçalho e menu de navegação */
+
+header {
+
+    height: 14vh;
+    background-color: var(--cor-secundaria);
+    z-index: 1 ;
+    position: sticky;
+    top: 0;
+
+    .limitador {
+        height: 12vh;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+}
+
+.logo {
+    margin-top: 20px ;
+    max-width: 75px;
+}
+
+a {text-decoration: none;}
+
+.titulo-menu {
+    cursor: pointer;
+    color: var(--cor-principal);
+    padding: 1rem;
+}
+
+.links-menu {
+display: flex;
+
+    a {
+        cursor: pointer;
+        color: var(--cor-secundaria);
+        font-weight: bold;
+        height: 50px;
+        font-size: 1.25rem;
+        letter-spacing: 3px;
+        margin-left: 24px;
+    }
+}
+
+.titulo-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--cor-principal);
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    .links-menu {
+        border: 1px solid;
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 50vw;
+        height: 86vh;
+        background-color:var(--cor-principal);
+        color: var(--cor-secundaria);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .links-menu li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .titulo-menu {
+        display: block;
+    }
+}
+
+.links-menu.aberto {
+    transform: translateX(0);
+}
+
+@keyframes aparecerLinks {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.titulo-menu.aberto .linha1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.titulo-menu.aberto .linha2 {
+    opacity: 0;
+}
+
+.titulo-menu.aberto .linha3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Calendario de jogos */
+
+.calendario {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 13vh;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+
+
+
+    .jogos {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        background-color: var(--principal-color);
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            line-height: 1.2;
+            font-size: 14px;
+            color: var(--titulo-color);
+
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 1.2;
+            color: var(--subtitulo-color);
+        }
+    }
+
+    .proximo-jogo {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 25px;
+            padding: 3px;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
